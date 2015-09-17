@@ -15,7 +15,7 @@ module Admin
   
     # GET /pages/new
     def new
-      @page = Page.new
+      @page = Page.new type: Type.where(name: params[:type]).first
     end
   
     # GET /pages/1/edit
